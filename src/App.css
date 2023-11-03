@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color:#5c05d4;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/* header */
+.Header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:black;
+  border-bottom: 2px solid #1D1D1D;
+}
+.Date p{
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+/* todo div */
+.Todo-div{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+.Input-todo input{
+  width: 500px;
+  padding: 12px;
+  background: #eaeaea;
+  border:none;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  color:black;
+  font-size: 1rem;
+}
+input:focus{
+  outline: none;
+}
+#Add-btn{
+  padding: 10px;
+  margin-left: 4px;
+  background: black;
+  color:white;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+
+/* list items */
+.Todo-task-list{
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  align-items: center;
+  gap: 50px;
+}
+.task-list-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  border: 2px solid #1D1D1D;
+  padding: 20px;
+  border-radius: 10px;
+}
+.task-list-wrapper li{
+  list-style-type: none;
+}
+.input-and-list{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+input[type = "checkbox"]{
+  padding: 10px;
+}
+.delete-btn{
+  background: none;
+  color:#5c05d4;
+  border: none;
+}
+.todo-header-status{
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+#task-size{
+  text-align: center;
+  font-size: .8rem;
+  color: #4e4e4e;
+}
+
+.IsCheck{
+  opacity: .2;
+  text-decoration: line-through;
+}
+
+/* media queries */
+@media screen and (max-width: 578px) {
+  .App{
+    gap: 35px;
+  }
+  .Date p{
+    font-size: .9rem;
+  }
+  .Todo-div input{
+    width: auto;
+  }
+  .Todo-task-list{
+    border-top: 2px solid #dfdfdf;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    margin-top: -50px;
+    padding: 40px;
+  }
+  .task-list-wrapper{
+    width: 300px;
+    border: 2px solid #eaeaea;
+    padding: 10px;
+  }
+  .task-list-wrapper li{
+    color:black;
+  }
+}
